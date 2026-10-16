@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">++++
+<html lang="fr">
+<link rel="stylesheet" href="css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dar El Halwa - Pâtisserie</title>
+    <style>
+        p{color: green;}
+    </style>
 </head>
 
-<body>
+<body style="margin: 0;" id="sommaire">
+<header>  
+    <h1 class="mise-en-avant" style="margin-left: 8px;">Dar El Halwa</h1>
+    <figure style="margin: 0; width: 100%;">
+        <figcaption style="margin-left: 8px;">
+            Notre vitrine de mignardises traditionnelles.
+        </figcaption>
 
-    <header>
-        <h1>Dar El Halwa</h1>
-
-        <figure>
-            <figcaption>
-                Notre vitrine de mignardises traditionnelles.
-            </figcaption>
-            <img src="images/patisserie.jpg"
-                 alt="Vitrine garnie de mignardises, cornes de gazelle et makrouds">
-        </figure>
-    </header>
+        <img src="frrrr.jpg"
+             alt="Vitrine de mignardises"
+             width="100%">
+    </figure>
+    <p style="color: red;">pattiserie fine depuis 1900</p>
+</header>
 
 
     <nav id="sommaire">
@@ -30,7 +35,9 @@
             <li><a href="#services">Nos services</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="carte.html">Carte des prix</a></li>
-            <li><a href="temoignages">temoignages</a></li>
+            <a href="#temoignages">temoignages</a>
+            <li><a href="commander.html">Commande</a></li>
+
         </ul>
     </nav>
 
@@ -45,11 +52,11 @@
                 dans les douceurs traditionnelles.
             </p>
 
-            <a href="#sommaire">↑ Retour au sommaire</a>
+            
         </section>
 
 
-        <section id="produits">
+        <section class="carte.info" id="produits">
             <h2>Nos produits</h2>
 
             <p>
@@ -57,7 +64,6 @@
                 des mignardises et des produits gourmands.
             </p>
 
-            <a href="#sommaire">↑ Retour au sommaire</a>
         </section>
 
 
@@ -69,7 +75,6 @@
                 les événements et les occasions spéciales.
             </p>
 
-            <a href="#sommaire">↑ Retour au sommaire</a>
         </section>
 
 
@@ -90,7 +95,6 @@
                 </a>
             </p>
 
-            <a href="#sommaire">↑ Retour au sommaire</a>
         </section>
 
 
@@ -98,25 +102,20 @@
             <h2>Ils parlent de nous</h2>
 
             <h3>Vidéo</h3>
-
-            <video controls>
-                <source src="medias/temoignage.mp4" type="video/mp4">
+            <video controls height="500" width="300">
+                <source src="13402388_1080_1920_30fps.mp4" type="video/mp4">
             </video>
 
             <h3>Audio</h3>
 
             <audio controls>
-                <source src="medias/avis-clients.mp3" type="audio/mpeg">
+                <source src="freesound_community-oh-x7-45655.mp3" type="audio/mpeg">
             </audio>
-
-            <p>
-                <a href="#sommaire">↑ Retour au sommaire</a>
-            </p>
         </section>
 
     </main>
 
-
+<a href="#sommaire">^</a>
     <footer>
 
         <h2>Suivez-nous</h2>
@@ -150,6 +149,5 @@
         <p>&copy; 2026 Dar El Halwa</p>
 
     </footer>
-
 </body>
 </html>

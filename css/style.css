@@ -1,0 +1,103 @@
+*, *::before, *::after {
+box-sizing: border-box;
+}
+:root {
+--miel: #c8912a;
+--chocolat: #4a2c1a;
+--creme: #fff8ef;
+--espace: 1rem;
+}
+body {
+background-color: var(--creme);
+color: gray ;}
+:link{
+    color: var(--miel);
+}
+h2{
+    color: var(--chocolat);
+    border-bottom: 2px var(--miel) ;
+}
+nav a{
+    text-align: none;
+    color: var(--chocolat);
+    font-weight: bold;
+}
+strong{
+    color: var(--miel);
+}
+footer{
+    background-color: var(--chocolat);
+    color: var(--creme);
+    text-align: center;
+}
+p,li{
+    line-height: 1.6;
+}
+#contact{
+    background-color: white;
+    padding: var(--espace) ;
+}
+.mise-en-avant{
+font-weight: bolder;
+font-style: italic;
+}
+a:visited{
+    color: rgb(0,129,0);
+}
+a:link{
+    color: var(--miel);
+}
+a:hover{
+    color: rgb(0,129,0);
+}
+a:active{
+    color: var(--chocolat);
+}
+p{
+    color: green;
+}
+main p{
+    color: blue;
+}
+.mise-en-avant{
+    color: gray;
+}
+.carte-info{
+    width: 400px;
+    padding: 20px;
+    border: 2px var(--miel);
+    margin: 30px;
+}
+table { 
+    border-collapse: collapse; width: 100%;
+ }
+thead {
+    background-color: var(--miel);
+    color: var(--chocolat);
+}
+th, td {
+    border: 1px solid gray;
+    padding: 8px;
+
+}
+tbody tr td:last-child { 
+    text-align:right; 
+}
+tbody tr:nth-child(even) { 
+    background-color: #faf3e8; }
+caption { 
+    caption-side: bottom;
+    font-style: italic;
+ }
+
+.fleche {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}

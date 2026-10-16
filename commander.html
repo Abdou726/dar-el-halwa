@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander</title>
+</head>
+
+<body id="sommaire">
+
+    <header>
+        <h1>Dar El Halwa</h1>
+
+        <figure>
+            <figcaption>
+                Notre vitrine de mignardises traditionnelles.
+            </figcaption>
+            <img src="darrrr.jpg"
+                 alt="Vitrine garnie de mignardises, cornes de gazelle et makrouds">
+        </figure>
+    </header>
+
+
+    <nav id="sommaire">
+        <h2>Sommaire</h2> 
+
+        <ul>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#produits">Nos produits</a></li>
+            <li><a href="#services">Nos services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="carte.html">Carte des prix</a></li>
+            <a href="#temoignages">temoignages</a>
+        </ul>
+    </nav>
+
+
+    <main>
+        <h2>Commander un gateau personalisé</h2>
+        <form action="traitement.php" method="post">
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <p>
+                <label for="nom">Nom :</label><br>
+                <input
+                type="text" id="nom" name="nom" minlength="2" required>
+                <br>
+                </p>
+                <p>
+                <label for="prenom">Prénom :</label><br>
+                <input type="text" id="prenom" name="prenom" minlength="2" required> <br>
+                </p>
+                <p>
+                <label for="email">Adresse électronique :</label><br>
+                <input
+                type="email" id="email" name="email" placeholder="vous@exemple.tn" required>
+                <br></p>
+                <p>
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" pattern="\+216[0-9]{8}" title="+216 suivi de 8 chiffres" placeholder="+21622550211" required>
+                </p>
+                <p>
+                <label for="code_postal">Code postal :</label>
+                <input type="text" id="code_postal" name="code_postal"  pattern="[0-9]{4}" title="Exactement 4 chiffres" placeholder="3000" required>
+                </p>
+                <p>
+                <label for="adresse">Adresse de livraison :</label><br>
+                <textarea id="adresse" name="adresse" rows="3" cols="40" required></textarea></p>
+                <br>
+                <p>
+                <label for="gouvernorat">Gouvernorat :</label><br>
+                <select id="gouvernorat" name="gouvernorat" required>
+                    <option value="Sfax" selected>Sfax</option>
+                    <option value="Tunis">Tunis</option>
+                    <option value="Sousse">Sousse</option>
+                    <option value="Gabès">Gabès</option>
+                    <option value="Autre">Autre</option>
+                </select></p>
+                <br>
+
+            </fieldset>
+
+    
+                <fieldset>
+                <legend>Personnalisation du gâteau</legend>
+
+                
+                <fieldset>
+                    <legend>Occasion</legend>
+
+                    <input type="radio" id="occ-anniv" name="occasion"
+                        value="anniversaire" required>
+                    <label for="occ-anniv">Anniversaire</label>
+
+                    <input type="radio" id="occ-mariage" name="occasion"
+                        value="mariage">
+                    <label for="occ-mariage">Mariage</label>
+
+                    <input type="radio" id="occ-fiancailles" name="occasion"
+                        value="fiancailles">
+                    <label for="occ-fiancailles">Fiançailles</label>
+
+                    <input type="radio" id="occ-autre" name="occasion"
+                        value="autre">
+                    <label for="occ-autre">Autre</label>
+                </fieldset>
+
+                <br>
+
+                
+                <label for="parts">Nombre de parts :</label>
+                <input type="number" id="parts" name="parts"
+                    min="6" max="100" step="2" value="12" required>
+
+                <br><br>
+
+                
+                <fieldset>
+                    <legend>Parfums souhaités</legend>
+
+                    <input type="checkbox" id="parfum-chocolat"
+                        name="parfums[]" value="Chocolat" checked>
+                    <label for="parfum-chocolat">Chocolat</label>
+
+                    <input type="checkbox" id="parfum-vanille"
+                        name="parfums[]" value="Vanille">
+                    <label for="parfum-vanille">Vanille</label>
+
+                    <input type="checkbox" id="parfum-pistache"
+                        name="parfums[]" value="Pistache">
+                    <label for="parfum-pistache">Pistache</label>
+
+                    <input type="checkbox" id="parfum-fruits"
+                        name="parfums[]" value="Fruits rouges">
+                    <label for="parfum-fruits">Fruits rouges</label>
+                </fieldset>
+
+                <br>
+                <label for="decors">Langages de décoration :</label><br>
+                <select multiple size="4" id="decors" name="decors[]">
+                    <option value="fleurs">Fleurs en pâte à sucre</option>
+                    <option value="fruits">Fruits frais</option>
+                    <option value="chocolat">Décoration en chocolat</option>
+                    <option value="creme">Crème décorative</option>
+                </select>
+
+                <br><br>
+
+                <label for="precisions">Précisions :</label><br>
+                <textarea id="precisions" name="precisions"
+                        rows="4" cols="40" maxlength="200"></textarea><br><br>
+                
+                <label for="sucre">Niveau de sucre :</label>
+                <input type="range" id="sucre" name="sucre"
+                    min="0" max="10" step="1" value="5">
+
+                <br><br>
+
+                
+                <label for="couleur">Couleur du glaçage :</label>
+                <input type="color" id="couleur" name="couleur"
+                    value="#c8912a">
+  
+                <br><br>
+
+                
+                <label for="message">Message sur le gâteau :</label>
+                <input type="text" id="message" name="message"
+                    maxlength="30">
+
+                <br><br>
+                <label for="photo">Photo de modèle :</label>
+                <input type="file" id="photo" name="photo"
+                    accept="image/*">
+
+            </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Confirmation</legend>
+                <label for="date-retrait">Date de retrait :</label>
+                <input type="date" id="date-retrait" name="date_retrait"
+                    min="2026-09-01" required>
+
+                <br><br>
+                <label for="date-horaire">Date Horaire :</label>
+                <input type="time" id="date-horaire" name="date_horaire">
+            </fieldset>
+            <p>
+            <button type="submit">Envoyer ma commande</button>
+            <button type="reset">Tout effacer</button>
+            </p>
+        </form>
+    </main>
+
+<a href="#sommaire">^</a>
+    <footer>
+
+        <h2>Suivez-nous</h2>
+
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/darelhalwa"
+                   target="_blank"
+                   rel="noopener">
+                    Facebook
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/darelhalwa"
+                   target="_blank"
+                   rel="noopener">
+                    Instagram
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.linkedin.com/company/darelhalwa"
+                   target="_blank"
+                   rel="noopener">
+                    LinkedIn
+                </a>
+            </li>
+        </ul>
+
+        <p>&copy; 2026 Dar El Halwa</p>
+
+    </footer>
+</body>
+</html>
