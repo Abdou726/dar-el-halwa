@@ -90,3 +90,16 @@ caption {
     caption-side: bottom;
     font-style: italic;
  }
+.retour{
+    display: inline-block;
+    background-color: black;
+    position: fixed;
+    bottom: 0.5rem;
+    right: 40px;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    font-style: italic;
+    text-align: center;
+    align-content: center;
+}
